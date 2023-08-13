@@ -1,0 +1,211 @@
+.news {
+  background-color: #fbfbfb;
+  > .row {
+    margin: auto;
+    .col-lg-3 {
+      .new-card {
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 3px 5px 14px 8px rgba(0, 0, 0, 0.1);
+        .new-card-img {
+          width: 100%;
+          display: inline-block;
+          height: 195px;
+          > img {
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .new-card-content {
+          border-top: 10px solid $mainColor;
+          padding: 20px;
+          height: 280px;
+          > a {
+            color: white;
+            padding: 4px 12px;
+            background-color: #d01a48;
+            display: inline-block;
+
+            border-radius: 5px;
+            font-weight: bold;
+          }
+          > h3 {
+            font-size: 22px;
+            font-weight: bold;
+            > a {
+              color: black;
+            }
+          }
+          > p {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  > .newsTop {
+    margin: 20px auto;
+  }
+
+  .newsSec_section_pd {
+    padding: 24px 24px 0 24px;
+    height: 220px;
+    .newsSec_section {
+      border-radius: 20px;
+      background-color: #f0f0f0;
+      overflow: hidden;
+      height: 100%;
+
+      .newsSecpd {
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        .newsSecImgArea {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          .newsSecImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .newsSecContent {
+        border-left: 10px solid $mainColor;
+        height: 100%;
+        .newsSecLeft {
+          width: 15%;
+          height: 100%;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          > div {
+            height: 57%;
+            text-align: center;
+            margin: 20px auto auto auto;
+            .newsSecATextArea {
+              display: inline-block;
+              padding: 4px 17px;
+              background-color: #d01a48;
+              border-radius: 5px;
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .newsSecRight {
+          width: 85%;
+          padding: 0;
+          margin: 0;
+          h5 {
+            font-weight: bold;
+            font-size: 22px;
+            padding: 20px 0 40px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $xm) {
+  .container {
+    max-width: 98%;
+    .col-lg-3 {
+      .new-card {
+        margin-bottom: 25px;
+        .new-card-img {
+          height: 458px !important;
+        }
+        .new-card-content {
+          height: 250px !important;
+        }
+      }
+    }
+  }
+
+  .news {
+  }
+}
+
+@media (max-width: 1200px) {
+  .news {
+    .newsSec_section_pd {
+      .newsSec_section {
+        .newsSecContent {
+          .newsSecLeft {
+            width: 20%;
+          }
+          .newsSecRight {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .news {
+    .newsSec_section_pd {
+      height: auto;
+      .newsSec_section {
+        .newsSecContent {
+          border-left: 0;
+          border-top: 10px solid $mainColor;
+          height: auto;
+          .newsSecLeft {
+            width: 100%;
+            height: 30%;
+            position: relative;
+            > div {
+              display: inline-block;
+              left: 20px;
+              position: absolute;
+            }
+            .newsSecATextAreaBottom {
+              display: inline-block;
+              position: absolute;
+              right: 20px;
+              margin-top: 20px;
+            }
+          }
+          .newsSecRight {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .container {
+    max-width: 98%;
+    .col-lg-3 {
+      .new-card {
+        margin-bottom: 25px;
+        .new-card-img {
+          height: 220px !important;
+        }
+        .new-card-content {
+          height: 250px !important;
+        }
+      }
+    }
+  }
+
+  .news {
+  }
+}
