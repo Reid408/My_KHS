@@ -2,6 +2,35 @@
   background-color: #fbfbfb;
   > .row {
     margin: auto;
+    .newsTitle {
+      padding: 40px 0 20px 0;
+      margin: 80px auto 0 auto;
+      position: relative;
+      &::before {
+        content: "";
+        background-image: url(../img/bg3.svg);
+        width: 90%;
+        height: 100px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        z-index: 1;
+      }
+
+      > h3 {
+        position: absolute;
+        z-index: 3;
+        color: white;
+        font-weight: bold;
+        left: 25px;
+        bottom: 2px;
+        letter-spacing: 3px;
+      }
+    }
+
     .col-lg-3 {
       .new-card {
         overflow: hidden;
@@ -11,7 +40,8 @@
           width: 100%;
           display: inline-block;
           height: 195px;
-          > img {
+          border-bottom: 10px solid $mainColor;
+          > div {
             background-position: center;
             background-size: cover;
             object-fit: cover;
@@ -21,7 +51,6 @@
         }
 
         .new-card-content {
-          border-top: 10px solid $mainColor;
           padding: 20px;
           height: 280px;
           > a {
@@ -48,10 +77,6 @@
     }
   }
 
-  > .newsTop {
-    margin: 20px auto;
-  }
-
   .newsSec_section_pd {
     padding: 24px 24px 0 24px;
     height: 220px;
@@ -67,13 +92,15 @@
         margin: 0;
         height: 100%;
         .newsSecImgArea {
-          display: inline-block;
+          display: block;
           width: 100%;
           height: 100%;
           .newsSecImg {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            background-position: center;
+            background-size: cover;
           }
         }
       }
@@ -132,9 +159,6 @@
       }
     }
   }
-
-  .news {
-  }
 }
 
 @media (max-width: 1200px) {
@@ -185,6 +209,12 @@
             margin-top: 50px;
           }
         }
+
+        .newsSecpd {
+          .newsSecImgArea {
+            height: 450px;
+          }
+        }
       }
     }
   }
@@ -204,8 +234,14 @@
         }
       }
     }
-  }
-
-  .news {
+    .newsSec_section_pd {
+      .newsSec_section {
+        .newsSecpd {
+          .newsSecImgArea {
+            height: 200px;
+          }
+        }
+      }
+    }
   }
 }

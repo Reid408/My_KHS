@@ -48,7 +48,25 @@
       margin: 0% auto;
       max-width: 1540px;
       width: 100%;
-
+      .serviceContentPd {
+        margin-bottom: 40px;
+        .card {
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          .service_img {
+            width: 100%;
+            height: 330px;
+            .inner {
+              width: 100%;
+              height: 100%;
+              background-position: 50%;
+              background-size: cover;
+              cursor: pointer;
+            }
+          }
+        }
+      }
       .card {
         --bs-card-bg: none;
         --bs-card-border-color: none;
